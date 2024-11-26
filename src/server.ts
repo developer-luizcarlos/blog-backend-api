@@ -4,6 +4,7 @@ import "dotenv/config";
 
 // imported routes
 import userRouter from "./routes/user/userRoute";
+import postRouter from "./routes/post/postRoute";
 
 const app: Express = express();
 
@@ -11,5 +12,6 @@ const app: Express = express();
 app.use(cors());
 app.use(express.json());
 app.use("/user", userRouter);
+app.use("/post", postRouter);
 
 export default app;
